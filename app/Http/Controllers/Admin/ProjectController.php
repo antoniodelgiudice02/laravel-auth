@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -16,7 +17,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::paginate(10);
+        $projects = Project::orderBy('id', 'desc')->paginate(10);
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -42,6 +43,7 @@ class ProjectController extends Controller
         $data = $request->all();
         $project = new Project;
         $project->fill($data);
+        $project->slug = Str::slug($project->title);
         $project->save();
         return redirect()->route('admin.projects.index');
     }
@@ -53,8 +55,9 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Project $project)
-    {
-        //
+    {   
+    
+        return view('admin.projects.show', compact('project'));
     }
 
     /**

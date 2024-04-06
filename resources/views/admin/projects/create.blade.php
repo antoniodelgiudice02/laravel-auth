@@ -17,7 +17,7 @@
         <div class="mb-3 col-3">
             <label for="content" class="form-label">Content</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="content" aria-describedby="basic-addon3 basic-addon4" name='content'>
+                <textarea type="text" class="form-control" id="content" aria-describedby="basic-addon3 basic-addon4" name='content'></textarea>
             </div>
         </div>
 
