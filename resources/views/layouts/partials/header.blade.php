@@ -22,6 +22,23 @@
               </li>
             @endif
           @else
+
+            <!-- PROGETTI -->
+
+            <li class="nav-item dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                href="#" id="navbarDropdown" role="button" v-pre>
+                Progetti
+              </a>
+
+              <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{{ route('admin.projects.index') }}"> Vedi Progetti</a>
+                <a class="dropdown-item" href="{{ route('admin.projects.create') }}"> Nuovo Progetto</a>
+              </div>
+            </li>
+
+            <!-- PROFILO -->
+
             <li class="nav-item dropdown">
               <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                 href="#" id="navbarDropdown" role="button" v-pre>
