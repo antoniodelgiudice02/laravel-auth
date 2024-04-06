@@ -8,11 +8,14 @@
         <h1>{{ $project->title }}</h1>
     </div>
 
+    <a class='btn btn-success' href="{{ route('admin.projects.index')}}">Torna Ai Progetti</a>
+
     <table class='table mt-3'>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Contenuto</th>
+                <th>Slug</th>
                 <th></th>
             </tr>
         </thead>
@@ -23,8 +26,10 @@
 
                     <td>{{ $project->content }}</td>
 
+                    <td>{{ $project->slug }}</td>
+
                     <td>
-                        <a class='btn btn-success' href="{{ route('admin.projects.update', $project)}}"><i class="fa-solid fa-pen-nib"></i></a>
+                        <a class='btn btn-success' href="{{ route('admin.projects.edit', $project)}}"><i class="fa-solid fa-pen-nib"></i></a>
                         <a class='btn btn-danger' href="{{ route('admin.projects.destroy', $project)}}"><i class="fa-solid fa-trash-can"></i></a>
                     </td>
                 </tr>
