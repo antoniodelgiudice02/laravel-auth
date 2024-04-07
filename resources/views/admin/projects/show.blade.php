@@ -17,6 +17,7 @@
                 <th>Contenuto</th>
                 <th>Slug</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +31,11 @@
 
                     <td>
                         <a class='btn btn-success' href="{{ route('admin.projects.edit', $project)}}"><i class="fa-solid fa-pen-nib"></i></a>
+                    </td>
+                    <td>
+                        
                         <a class='btn btn-danger' href="{{ route('admin.projects.destroy', $project)}}"><i class="fa-solid fa-trash-can"></i></a>
+
                     </td>
                 </tr>
 
